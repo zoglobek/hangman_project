@@ -48,4 +48,3 @@ HANGMANPICS = ['''
  / \  |
       |
 =========''']
-print(HANGMANPICS[4])
