@@ -1,5 +1,6 @@
 def chek_if(guess):
-    print("ok")
+    print(guess)
+
 
 def player_guess():
     guess = str(input("Please input a letter\n"))
