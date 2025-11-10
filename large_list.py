@@ -1,3 +1,5 @@
+import random
+
 word_list = [
 "whistle", "crimson", "jungle", "orbit", "flavor", "tumble", "glimmer", "hazard", "quiver", "sizzle",
 "plasma", "ripple", "snatch", "velvet", "twinkle", "gadget", "mystic", "puzzle", "flicker", "breeze",
@@ -11,3 +13,20 @@ word_list = [
 ]
 
 
+def word_of_game():
+    word_num = random.randrange(90)
+    chosen_word = word_list[word_num]
+
+    return chosen_word
+
+
+
+def dotted_line():
+    word_len = len(word_of_game())
+    return "_" * word_len
+
+
+
+
+print(word_of_game())
+print(dotted_line())
