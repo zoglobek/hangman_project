@@ -16,15 +16,19 @@ word_list = [
 def word_of_game():
     word_num = random.randrange(90)
     chosen_word = word_list[word_num]
-    gamedata = {word_num: chosen_word}
-    return chosen_word
+    gamedata = {
+            "chosen_number" : word_num,
+            "picked_word": chosen_word}
+    return gamedata
 
 
 
 def dotted_line():
+    chosen = word_of_game()
+    chosen{"chosen_word"}
     word_len = len(word_of_game())
     return "_" * word_len
 
 
 
-print(word_of_game(locals(gamedata)))
+print(word_of_game)
