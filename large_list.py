@@ -16,7 +16,7 @@ word_list = [
 def word_of_game():
     word_num = random.randrange(90)
     chosen_word = word_list[word_num]
-
+    gamedata = {word_num: chosen_word}
     return chosen_word
 
 
@@ -27,6 +27,4 @@ def dotted_line():
 
 
 
-
-print(word_of_game())
-print(dotted_line())
+print(word_of_game(locals(gamedata)))
