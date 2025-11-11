@@ -17,18 +17,17 @@ def word_of_game():
     word_num = random.randrange(90)
     chosen_word = word_list[word_num]
     gamedata = {
-            "chosen_number" : word_num,
+            "chosen_number": word_num,
             "picked_word": chosen_word}
     return gamedata
 
 
-
-def dotted_line():
-    chosen = word_of_game()
-    chosen{"chosen_word"}
-    word_len = len(word_of_game())
-    return "_" * word_len
+def dotted_line(word):
+    dot = len(word)
+    print(dot * "_")
 
 
 
-print(word_of_game)
+
+word_and_place = word_of_game()
+guessing_line = dotted_line(word_and_place.get("picked_word"))
