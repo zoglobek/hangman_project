@@ -1,4 +1,4 @@
-def chek_if(guess):
+def check_if(guess):
     print(guess)
 
 
@@ -8,7 +8,7 @@ def player_guess():
     guess = guess.lower()
     if len(guess) == 1:
         if guess.isalpha():
-            chek_if(guess)
+            check_if(guess)
     else:
         print("Invalid guess")
         print("guess again")
@@ -16,3 +16,5 @@ def player_guess():
 
 
 
+if __name__ == '__main__':
+    ...

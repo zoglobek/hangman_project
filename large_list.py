@@ -12,22 +12,33 @@ word_list = [
 "mirth", "nudge", "obscure", "pounce", "quirk", "rustle", "slither", "tangle", "uplift", "vivid"
 ]
 
+gamedata = {"num":0 ,
+            "chosen_word":"none"
+            }
+def randomizer():
+    WORDNUM = random.randrange(90)
+    return gamedata.update({"num": WORDNUM})
+
+
 
 def word_of_game():
-    word_num = random.randrange(90)
-    chosen_word = word_list[word_num]
-    gamedata = {
-            "chosen_number": word_num,
-            "picked_word": chosen_word}
-    return gamedata
+    chosen_word = word_list[gamedata.get("num")]
+    return gamedata.update({"chosen_word": chosen_word})
 
 
 def dotted_line(word):
     dot = len(word)
-    print(dot * "_")
+    return dot * "_ "
+
+randomizer()
+word_of_game()
+print(gamedata.get("num"))
+print(gamedata.get("chosen_word"))
 
 
 
+guessing_line = dotted_line(gamedata.get("chosen_word"))
+print(guessing_line)
 
-word_and_place = word_of_game()
-guessing_line = dotted_line(word_and_place.get("picked_word"))
+if __name__ == '__main__':
+    ...
